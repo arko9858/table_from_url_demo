@@ -21,13 +21,16 @@ const SearchBar = ({ setData }) => {
           setResponseMsg(JSON.stringify(res.data));
           setData(res.data);
         })
-        .catch((err) => setResponseMsg(err.response.statusText));
+        .catch((err) => console.log(err));
     }
   };
 
   return (
     <Fragment>
       <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
         noValidate
         autoComplete="off"
         style={{ width: "100%", margin: "16px 0" }}
