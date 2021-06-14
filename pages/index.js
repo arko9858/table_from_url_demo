@@ -7,7 +7,7 @@ import {  useState } from "react";
 export default function Home() {
   const [data, setData] = useState([]);
 
-  const baseURL = "http://localhost:3000/api/"
+  const baseURL = "https://table-from-url-demo.vercel.app/api/"
 
   return (
     <div>
